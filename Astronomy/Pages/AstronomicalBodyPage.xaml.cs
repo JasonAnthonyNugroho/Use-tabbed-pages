@@ -7,10 +7,11 @@ public partial class AstronomicalBodyPage : ContentPage
     {
         InitializeComponent();
 
-        btnComet.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails");
-        btnEarth.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails");
-        btnMoon.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails");
-        btnSun.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails");
+        btnComet.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails?astroName=comet");
+        btnEarth.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails?astroName=earth");
+        btnMoon.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails?astroName=moon");
+        btnSun.Clicked += async (s, e) => await Shell.Current.GoToAsync("astronomicalbodydetails?astroName=sun");
+
     }
 
     void UpdateAstroBodyUI(string astroName)
@@ -24,6 +25,8 @@ public partial class AstronomicalBodyPage : ContentPage
         lblMass.Text = body.Mass;
         lblCircumference.Text = body.Circumference;
         lblAge.Text = body.Age;
+
+
     }
 
     AstronomicalBody FindAstroData(string astronomicalBodyName)
