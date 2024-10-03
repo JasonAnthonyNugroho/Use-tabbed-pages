@@ -12,6 +12,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    
+    
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IconOverride="comet.png"/>
     </Shell.BackButtonBehavior>
@@ -44,4 +46,6 @@
         <Label x:Name="lblCircumference" FontSize="Medium" Grid.Row="3" Grid.Column="1" />
         <Label x:Name="lblAge" FontSize="Medium" Grid.Row="4" Grid.Column="1" />
     </Grid>
+    
+    
 </ContentPage>
